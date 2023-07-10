@@ -7,50 +7,52 @@
     /* Para que el scrolleo en la one page sea suave */
     scroll-behavior: smooth;
 }
-
-    
-    
-    
-}
-    
+  
 body {
-    background-color: beige;
+    background-color: beige;    
 }
 
 header{
     width: 100%;
-    height: 50px;
+    height: 30px;
     padding-top: 10px;
     display: table;
     box-shadow: 1px 1px 5px;
     background-color: #acb0ad;
-    position: fixed;
+    position: fixed;  
+}
+
+#inicio {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    padding-top: 5%;
      
 }
 
 .menu{
-    margin-bottom: 5%;
-    margin-right: 5%; 
-}
-
-
-nav{
-    float: right;
-   
+    margin-bottom: 2%;
+    margin-right: 2%; 
 }
 
 nav li {
-    margin-left: 75px;
+    margin-left: 10px;
     float: left;
-    padding: 10px;
+    padding:10px;
     display: inline-flex;
     cursor: pointer;
-    
+    float: right;  
 }
 
 nav li:hover { background-color: white;
     border-radius: 5px;
+}
 
+nav h2 {
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
 }
 
 
@@ -59,14 +61,13 @@ nav li:hover { background-color: white;
 */
 main {
     max-width: 2000px;
-    margin: 50px;
-    padding-top: 100px;
+    margin: 80px;
+    padding-top: 150px;
     line-height: 1.5;
     margin-top: 0;
-    text-align: center;
-    
-     
+    text-align: center;   
 }
+
 section{
     text-align: center;
 }
@@ -75,8 +76,7 @@ section{
     width: 200px;
     height: 200px;
     object-fit: cove;
-    border-radius: 50%;
-    
+    border-radius: 50%;    
 }
 
 .boton{
@@ -85,28 +85,26 @@ section{
     color: black;
     padding-top:15px;
     padding-bottom:15px;
-    padding-left:40px;
-    padding-right:40px;
+    padding-left:10px;
+    padding-right:10px;
     background-color: #5dc1b9;
-    border-radius:35px;
-    
+    border-radius:35px; 
 }
 .boton:hover{
     background-color: #acb0ad;
-}
 
+  }
 
-#hablemos{background-color: #5dc1b9;
+.hablemos{
+    background-color: #5dc1b9;
     padding-top:15px;
     padding-bottom:15px;
     padding-left:20px;
     padding-right:20px;
-    text-align: justify;
-   
-    
+    text-align: justify;       
     }
 
-#Habilidades{
+.Habilidades{
     background-color: #acb0ad;
     padding-top:15px;
     padding-bottom:15px;
@@ -115,7 +113,8 @@ section{
     text-align: justify;
 }
 
-#Hobby{background-color: #5dc1b9;
+.Hobby{
+    background-color: #5dc1b9;
     padding-top:15px;
     padding-bottom:15px;
     padding-left:20px;
@@ -124,30 +123,47 @@ section{
 
 }
 
-#cuadros {
+.Actualmente {
+    background-color: #acb0ad ;
+    padding-top:40px;
+    padding-bottom:60px;
+    padding-left:40px;
+    padding-right:40px;
+    border-radius:100px;
+    }
+
+#contacto {
     margin-top: 5%;
 }
 
-#cuadros a {
+#contacto a {
     padding: 5%;
 
 }
 
+#contacto h2{
+    background-color: #5dc1b9;
+}
 
 article{padding-top: 40px; padding-bottom: 60px;}
 
 
 
-footer {color: black;
+footer {
+     color: black;
      background-color: #acb0ad;
      padding-top: 20px;
-     padding-bottom: 20px; }
+     padding-bottom: 20px; 
+     padding-right: 20px;
+     padding-left: 20px;
+     text-align: center;
+     box-shadow: 2px 3px 2px 4px;
+    }
 
-footer p {
-    text-align: center
- }     
-
-
+#codigopalante{
+        border-radius: 15%;
+}
+   
 /* Fonts */
 /* Importar aquí la font */
 @import url('https://fonts.googleapis.com/css2?family=Inika&display=swap');
@@ -164,22 +180,23 @@ a {
     color: inherit;
 }
 
+@media (min-width: 1024px) {
+        section#inicio{
+        flex-direction: row;
+    }
+
+    article.presentacion{
+        text-align: left ;
+        width: 100%;
+        padding-left: 5%;
+
+    }
+    body {
+        background-color: rgb(242, 213, 248);
+    }
 
 
-/* Recomendaciones! 
-*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
-*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
-*
-*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
-*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
-*
-*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
-*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
-*
-*  - Usen mucho las herramientas para desarrolladores del navegador para ir
-*    probando el CSS que escriben, resolver dudas y problemas.
-*
-*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
-*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
-*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
-*/
+}
+
+
+
